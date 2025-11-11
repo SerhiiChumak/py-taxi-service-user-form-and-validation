@@ -87,6 +87,7 @@ class CarDetailView(LoginRequiredMixin, generic.DetailView):
             self.object.drivers.remove(user)
         return redirect("taxi:car-detail", pk=self.object.pk)
 
+
 class CarCreateView(LoginRequiredMixin, generic.CreateView):
     model = Car
     fields = "__all__"
